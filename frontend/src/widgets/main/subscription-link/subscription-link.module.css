@@ -14,12 +14,20 @@
     color: white;
 }
 
+/* fix #6: иконка ссылки — синий цвет вместо белого */
+/* fix #3: светлый фон кнопки вместо тёмного */
 .actionIcon {
     background: #EAD8CF;
-    border: 1px solid rgba(0, 136, 204, 0.2);
-    color: rgb(0, 136, 204);
+    border: 1px solid #d4b8ac;
+    color: rgb(0, 136, 204) !important;
 }
 
 .actionIcon:hover {
     background: #dfc9be;
+    border-color: #c4a090;
+}
+
+.actionIcon svg {
+    color: rgb(0, 136, 204) !important;
+    stroke: rgb(0, 136, 204) !important;
 }

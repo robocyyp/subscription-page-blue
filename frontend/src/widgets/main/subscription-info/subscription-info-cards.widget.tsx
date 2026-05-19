@@ -52,7 +52,8 @@ const CardItem = ({ icon, label, value, color }: CardItemProps) => {
                     >
                         {label}
                     </Text>
-                    <Text className={classes.value} fw={600} size="sm">
+                    {/* fix #4: цвет значения изменён с white на синий */}
+                    <Text className={classes.value} fw={600} size="sm" style={{ color: '#1a5fa8' }}>
                         {value}
                     </Text>
                 </Stack>

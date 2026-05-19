@@ -10,13 +10,14 @@
     display: flex;
     align-items: center;
     flex: 1 1 auto;
-    padding: 0 48px 0 24px;
+    /* fix #5: увеличен левый padding чтобы featured badge не заходил на текст */
+    padding: 0 48px 0 20px;
     height: 48px;
     min-width: 0;
-    overflow: visible;
+    overflow: hidden;
     background: #ffffff;
     border: 1px solid #c8dcea;
-    border-left: 3px solid #c8dcea;
+    /* fix #5: убрана жёсткая левая граница — теперь обычная */
     border-radius: var(--mantine-radius-xl);
     cursor: pointer;
     transition: all 0.2s ease;
@@ -25,7 +26,7 @@
 
 .appButton:hover {
     background: #f0f7fd;
-    border-left-color: #7ab8d8;
+    border-color: #7ab8d8;
     box-shadow: 0 2px 8px rgba(0, 80, 140, 0.1);
 }
 
@@ -36,11 +37,9 @@
 .appButtonActive,
 .appButtonActive:hover {
     background: linear-gradient(90deg, rgba(59, 130, 200, 0.12) 0%, rgba(59, 130, 200, 0.04) 100%);
-    border-color: rgba(59, 130, 200, 0.3);
-    border-left-color: #3b82c8;
+    border-color: #3b82c8;
     box-shadow:
-        inset 4px 0 12px -4px rgba(59, 130, 200, 0.2),
-        0 0 12px rgba(59, 130, 200, 0.08);
+        0 0 12px rgba(59, 130, 200, 0.12);
 }
 
 .appButtonActive .appName {
@@ -91,21 +90,23 @@
     white-space: nowrap;
 }
 
+/* fix #3 & #5: featured badge — убран с левого края кнопки, теперь не торчит */
 .featuredBadge {
     position: absolute;
-    top: -4px;
-    left: -4px;
+    top: 50%;
+    left: -5px;
+    transform: translateY(-50%);
     width: 10px;
     height: 10px;
     display: inline-block;
     opacity: 1;
     z-index: 2;
     border-radius: 50%;
-    background: #f97316;
-    box-shadow: 0 0 6px rgba(249, 115, 22, 0.5);
+    background: #EAD8CF;
+    box-shadow: 0 0 6px rgba(234, 216, 207, 0.7);
 }
 
 .appButtonActive .featuredBadge {
     opacity: 0.9;
-    box-shadow: 0 0 8px rgba(249, 115, 22, 0.4);
+    box-shadow: 0 0 8px rgba(234, 216, 207, 0.6);
 }

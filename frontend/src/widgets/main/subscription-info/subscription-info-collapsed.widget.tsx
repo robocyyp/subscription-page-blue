@@ -74,12 +74,13 @@ export const SubscriptionInfoCollapsedWidget = ({ isMobile }: IProps) => {
             >
                 <Group gap="sm" justify="space-between" wrap="nowrap">
                     <Group gap="xs" style={{ minWidth: 0, flex: 1 }} wrap="nowrap">
+                        {/* fix #3: фон иконки галочки = #EAD8CF */}
                         <ThemeIcon
                             color={status.color}
                             radius="xl"
                             size={isMobile ? 28 : 32}
                             style={{
-                                background: gradientColor.background,
+                                background: '#EAD8CF',
                                 border: gradientColor.border,
                                 boxShadow: gradientColor.boxShadow,
                                 flexShrink: 0

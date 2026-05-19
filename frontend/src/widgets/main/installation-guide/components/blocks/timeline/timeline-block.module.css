@@ -1,6 +1,7 @@
 /* Timeline styles */
 .timelineRoot {
-    --tl-line-color: rgba(255, 255, 255, 0.08);
+    /* fix #2: цвет линии timeline — голубой светлый */
+    --tl-line-color: rgba(100, 180, 220, 0.4);
 }
 
 .timelineItem {
