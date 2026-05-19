@@ -1,11 +1,17 @@
 /* Timeline styles */
 .timelineRoot {
-    /* fix #2: цвет линии timeline — голубой светлый */
     --tl-line-color: rgba(100, 180, 220, 0.4);
 }
 
+/* fix #6: убрать верхний отступ у элементов таймлайна */
 .timelineItem {
-    padding-bottom: var(--mantine-spacing-md);
+    padding-bottom: var(--mantine-spacing-xs);
+    margin-top: 0 !important;
+}
+
+.timelineItem + .timelineItem {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
 }
 
 .timelineItemBullet {

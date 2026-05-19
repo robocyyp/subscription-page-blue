@@ -16,7 +16,8 @@ export const InfoBlockShared = ({ color, icon, title, value }: IInfoBlockProps) 
                         {title}
                     </Text>
                 </Group>
-                <Text c="white" fw={600} size="sm" truncate>
+                {/* fix #3: цвет текста значения #8b8b8b вместо white */}
+                <Text fw={600} size="sm" style={{ color: '#8b8b8b' }} truncate>
                     {value}
                 </Text>
             </Stack>

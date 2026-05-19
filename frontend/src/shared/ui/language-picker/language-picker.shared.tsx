@@ -51,17 +51,19 @@ export function LanguagePicker(props: IProps) {
     return (
         <Menu position="bottom" width={150} withArrow={false} withinPortal>
             <Menu.Target>
+                {/* fix #7: цвет иконки языка #939393 */}
                 <ActionIcon
                     color="gray"
                     radius="md"
                     size="xl"
                     style={{
                         background: 'rgba(255, 255, 255, 0.02)',
-                        border: '1px solid rgba(255, 255, 255, 0.1)'
+                        border: '1px solid rgba(255, 255, 255, 0.1)',
+                        color: '#939393'
                     }}
                     variant="default"
                 >
-                    <IconLanguage size={22} />
+                    <IconLanguage color="#939393" size={22} />
                 </ActionIcon>
             </Menu.Target>
             <Menu.Dropdown mah={250} style={{ overflowY: 'auto' }}>{items}</Menu.Dropdown>

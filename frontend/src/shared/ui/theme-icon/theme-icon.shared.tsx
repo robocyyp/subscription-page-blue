@@ -18,7 +18,8 @@ export const ThemeIconShared = (props: IProps) => {
             radius="xl"
             size={isMobile ? 36 : 44}
             style={{
-                background: gradientStyle.background,
+                /* fix #2: фон иконок таймлайна = #EAD8CF */
+                background: '#EAD8CF',
                 border: gradientStyle.border,
                 boxShadow: gradientStyle.boxShadow,
                 flexShrink: 0
