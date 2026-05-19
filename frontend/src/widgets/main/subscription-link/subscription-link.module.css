@@ -14,16 +14,15 @@
     color: white;
 }
 
-/* fix #1: кнопка ссылки — белый/прозрачный фон, синяя иконка */
+/* fix #1: кнопка ссылки — прозрачный фон, без границы */
 .actionIcon {
-    background: rgba(255, 255, 255, 0.9);
-    border: 1px solid rgba(180, 210, 230, 0.6);
+    background: #ffffff00 !important;
+    border: 1px solid rgb(180 210 230 / 0%) !important;
     color: rgb(0, 136, 204) !important;
 }
 
 .actionIcon:hover {
-    background: #f0f7fd;
-    border-color: #a8cfe8;
+    background: rgba(0, 136, 204, 0.08) !important;
 }
 
 .actionIcon svg {

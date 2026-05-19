@@ -140,6 +140,7 @@ export const InstallationGuideConnector = (props: IProps) => {
                         }
                         onClick={() => handleButtonClick(button)}
                         radius="xl"
+                        style={{ background: '#EAD8CF', color: '#b85c00', border: 'none' }}
                         variant={variant}
                     >
                         {t(button.text)}
@@ -197,11 +198,14 @@ export const InstallationGuideConnector = (props: IProps) => {
                             }}
                             radius="xl"
                             size="sm"
-                            /* fix #8: светло-голубой фон как в коммите 39c42b2 */
-                            style={{
-                                background: '#d6eaf7',
-                                border: '1px solid #a8cfe8',
-                                borderRadius: 'var(--mantine-radius-xl)'
+                            /* fix #3: стиль из коммита 39c42b2 — голубой фон */
+                            styles={{
+                                input: {
+                                    background: 'rgba(0, 136, 204, 0.08)',
+                                    border: '1px solid rgba(0, 136, 204, 0.3)',
+                                    borderRadius: 'var(--mantine-radius-xl)',
+                                    color: '#0059a0'
+                                }
                             }}
                             value={selectedPlatform}
                             w={160}
