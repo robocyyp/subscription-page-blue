@@ -54,7 +54,16 @@ export const SubscriptionInfoCollapsedWidget = ({ isMobile }: IProps) => {
     const gradientColor = getColorGradientSolid(status.color)
 
     return (
-        <Card p={0} radius="lg" style={{ overflow: 'hidden' }}>
+        <Card
+            p={0}
+            radius="xl"
+            style={{
+                overflow: 'hidden',
+                background: '#ffffff',
+                border: '1px solid #c8dcea',
+                boxShadow: '0 2px 16px rgba(0, 80, 140, 0.07)'
+            }}
+        >
             <UnstyledButton
                 onClick={() => {
                     vibrate('tap')
@@ -82,7 +91,7 @@ export const SubscriptionInfoCollapsedWidget = ({ isMobile }: IProps) => {
 
                         <Stack gap={0} style={{ minWidth: 0, flex: 1 }}>
                             <Text
-                                c="white"
+                                c="#1a2a3a"
                                 fw={600}
                                 size={isMobile ? 'sm' : 'md'}
                                 style={{
@@ -93,7 +102,7 @@ export const SubscriptionInfoCollapsedWidget = ({ isMobile }: IProps) => {
                             >
                                 {user.username}
                             </Text>
-                            <Text c="dimmed" size="xs" style={{ whiteSpace: 'nowrap' }}>
+                            <Text c="#6b8caa" size="xs" style={{ whiteSpace: 'nowrap' }}>
                                 {getExpirationTextUtil(
                                     user.expiresAt,
                                     currentLang,
@@ -105,7 +114,7 @@ export const SubscriptionInfoCollapsedWidget = ({ isMobile }: IProps) => {
 
                     <Group gap="xs" style={{ flexShrink: 0 }} wrap="nowrap">
                         <IconChevronDown
-                            color="var(--mantine-color-dimmed)"
+                            color="#6b8caa"
                             size={18}
                             style={{
                                 transform: isExpanded ? 'rotate(180deg)' : 'rotate(0deg)',

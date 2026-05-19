@@ -99,7 +99,7 @@ export const InstallationGuideConnector = (props: IProps) => {
                 notifications.show({
                     title: t(baseTranslations.linkCopied),
                     message: t(baseTranslations.linkCopiedToClipboard),
-                    color: 'cyan'
+                    color: 'orange'
                 })
                 break
             }
@@ -129,6 +129,7 @@ export const InstallationGuideConnector = (props: IProps) => {
                 {buttons.map((button, index) => (
                     <Button
                         key={index}
+                        color="orange"
                         leftSection={
                             <span
                                 dangerouslySetInnerHTML={{
@@ -138,7 +139,7 @@ export const InstallationGuideConnector = (props: IProps) => {
                             />
                         }
                         onClick={() => handleButtonClick(button)}
-                        radius="md"
+                        radius="xl"
                         variant={variant}
                     >
                         {t(button.text)}
@@ -151,10 +152,18 @@ export const InstallationGuideConnector = (props: IProps) => {
     const getIcon = (iconKey: string) => getIconFromLibrary(iconKey, svgLibrary)
 
     return (
-        <Card p={{ base: 'sm', xs: 'md', sm: 'lg', md: 'xl' }} radius="lg">
+        <Card
+            p={{ base: 'sm', xs: 'md', sm: 'lg', md: 'xl' }}
+            radius="xl"
+            style={{
+                background: '#ffffff',
+                border: '1px solid #c8dcea',
+                boxShadow: '0 2px 16px rgba(0, 80, 140, 0.07)'
+            }}
+        >
             <Stack gap="md">
                 <Group gap="sm" justify="space-between">
-                    <Title c="white" fw={600} order={4}>
+                    <Title c="#1a2a3a" fw={700} order={4}>
                         {t(baseTranslations.installationGuideHeader)}
                     </Title>
 
@@ -186,10 +195,15 @@ export const InstallationGuideConnector = (props: IProps) => {
                                 setSelectedPlatform(value)
                                 setSelectedAppIndex(0)
                             }}
-                            radius="md"
+                            radius="xl"
                             size="sm"
+                            style={{
+                                background: '#ffffff',
+                                border: '1px solid #c8dcea',
+                                borderRadius: 'var(--mantine-radius-xl)'
+                            }}
                             value={selectedPlatform}
-                            w={150}
+                            w={160}
                         />
                     )}
                 </Group>
