@@ -77,8 +77,8 @@ export const MainPageComponent = ({ isMobile, platform }: IMainPageComponentProp
                                     fit="contain"
                                     src={config.brandingSettings.logoUrl}
                                     style={{
-                                        width: '32px',
-                                        height: '32px',
+                                        width: '50px',
+                                        height: '50px',
                                         flexShrink: 0
                                     }}
                                 />

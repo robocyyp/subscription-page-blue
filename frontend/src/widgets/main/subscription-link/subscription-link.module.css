@@ -15,6 +15,11 @@
 }
 
 .actionIcon {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #EAD8CF;
+    border: 1px solid rgba(0, 136, 204, 0.2);
+    color: rgb(0, 136, 204);
+}
+
+.actionIcon:hover {
+    background: #dfc9be;
 }

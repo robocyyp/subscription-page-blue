@@ -10,10 +10,10 @@
     display: flex;
     align-items: center;
     flex: 1 1 auto;
-    padding: 0 48px 0 16px;
+    padding: 0 48px 0 24px;
     height: 48px;
     min-width: 0;
-    overflow: hidden;
+    overflow: visible;
     background: #ffffff;
     border: 1px solid #c8dcea;
     border-left: 3px solid #c8dcea;
@@ -93,13 +93,13 @@
 
 .featuredBadge {
     position: absolute;
-    top: 4px;
-    left: 4px;
-    width: 8px;
-    height: 8px;
+    top: -4px;
+    left: -4px;
+    width: 10px;
+    height: 10px;
     display: inline-block;
     opacity: 1;
-    z-index: 0;
+    z-index: 2;
     border-radius: 50%;
     background: #f97316;
     box-shadow: 0 0 6px rgba(249, 115, 22, 0.5);
