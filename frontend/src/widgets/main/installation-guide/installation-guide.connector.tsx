@@ -140,7 +140,8 @@ export const InstallationGuideConnector = (props: IProps) => {
                         }
                         onClick={() => handleButtonClick(button)}
                         radius="xl"
-                        style={{ background: '#EAD8CF', color: '#b85c00', border: 'none' }}
+                        /* fix #2: цвет текста кнопок #FC9045, фон EAD8CF, без границы */
+                        style={{ background: '#EAD8CF', color: '#FC9045', border: 'none' }}
                         variant={variant}
                     >
                         {t(button.text)}
@@ -198,7 +199,6 @@ export const InstallationGuideConnector = (props: IProps) => {
                             }}
                             radius="xl"
                             size="sm"
-                            /* fix #3: стиль из коммита 39c42b2 — голубой фон */
                             styles={{
                                 input: {
                                     background: 'rgba(0, 136, 204, 0.08)',
